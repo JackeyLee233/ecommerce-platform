@@ -1,0 +1,60 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0b1020;
+  color: #e8ecf3;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+.hero {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px; margin-bottom: 24px; padding: 24px;
+  background: linear-gradient(135deg, #151d36, #1f2c52); border-radius: 20px;
+}
+.hero h1 { margin: 0 0 8px; font-size: 32px; }
+.hero p { margin: 0; color: #b9c3d9; }
+.status-box {
+  min-width: 180px; background: rgba(255,255,255,0.08); border-radius: 16px;
+  padding: 16px; display: flex; flex-direction: column; gap: 8px;
+}
+.status-box strong { font-size: 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.card {
+  background: #141b2d; border: 1px solid #263252; border-radius: 18px;
+  padding: 20px; box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+.full-width { grid-column: 1 / -1; }
+h2 { margin-top: 0; }
+form { display: grid; gap: 10px; }
+input, button {
+  border-radius: 12px; border: 1px solid #314062; padding: 12px 14px; font-size: 14px;
+}
+input { background: #0d1424; color: #fff; }
+button {
+  background: #4f7cff; color: white; cursor: pointer; border: none; font-weight: 600;
+}
+button:hover { background: #3e69e8; }
+.result {
+  margin-top: 12px; background: #0d1424; border-radius: 12px; padding: 12px;
+  min-height: 60px; white-space: pre-wrap; word-break: break-word; color: #b7c9ff;
+}
+.meta-row {
+  display: flex; justify-content: space-between; gap: 12px; margin-bottom: 10px;
+  color: #c8d3ea;
+}
+code { color: #8fd6ff; }
+.section-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+.product {
+  background: #0d1424; border: 1px solid #263252; border-radius: 14px; padding: 14px;
+}
+.product h3 { margin: 0 0 8px; font-size: 18px; }
+.product p { margin: 6px 0; color: #b9c3d9; }
+.empty {
+  display: block; padding: 20px; border: 1px dashed #3a4d79; border-radius: 12px; color: #98a8cb;
+}
+.ok { color: #6ee7a8; }
+.bad { color: #ff7f7f; }
+@media (max-width: 700px) {
+  .hero { flex-direction: column; align-items: flex-start; }
+}

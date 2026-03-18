@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-commerce Frontend</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div>
+        <h1>电商系统前端</h1>
+        <p>一个最小可用的前端面板，连接当前运行中的后端 API。</p>
+      </div>
+      <div class="status-box">
+        <span>后端状态</span>
+        <strong id="healthStatus">检测中...</strong>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>系统信息</h2>
+        <div class="meta-row"><span>前端地址</span><code id="frontendUrl"></code></div>
+        <div class="meta-row"><span>后端地址</span><code id="apiBase">http://127.0.0.1:3000/api</code></div>
+        <button id="refreshHealth">刷新健康状态</button>
+      </section>
+
+      <section class="card">
+        <h2>注册</h2>
+        <form id="registerForm">
+          <input name="username" placeholder="用户名" required />
+          <input name="email" type="email" placeholder="邮箱" required />
+          <input name="password" type="password" placeholder="密码（至少6位）" required />
+          <input name="firstName" placeholder="名" />
+          <input name="lastName" placeholder="姓" />
+          <button type="submit">注册</button>
+        </form>
+        <pre id="registerResult" class="result"></pre>
+      </section>
+
+      <section class="card">
+        <h2>登录</h2>
+        <form id="loginForm">
+          <input name="email" type="email" placeholder="邮箱" required />
+          <input name="password" type="password" placeholder="密码" required />
+          <button type="submit">登录</button>
+        </form>
+        <pre id="loginResult" class="result"></pre>
+      </section>
+
+      <section class="card full-width">
+        <div class="section-head">
+          <h2>商品列表</h2>
+          <button id="loadProducts">加载商品</button>
+        </div>
+        <div id="products" class="products empty">暂无数据，点击“加载商品”试试。</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
